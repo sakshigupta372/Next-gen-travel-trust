@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Your Travel Apps</title>
+    <link rel="stylesheet" href="../css/style3.css">
+    <script>
+        // JavaScript to show the "Continue" button when a checkbox is selected
+        function toggleContinueButton() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            const continueButton = document.getElementById('continue-btn');
+            if (checkboxes.length > 0) {
+                continueButton.style.display = 'inline-block';
+            } else {
+                continueButton.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    
+  <div class="form-container">
+    <h1>Link Your Travel Apps</h1>
+    <form action="#" method="POST" id="travel-app-form">
+      <label for="ticket-booking">Choose Ticket Booking Apps:</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="bookmyticket" name="ticket-booking" value="Book My Ticket" onclick="toggleContinueButton()">
+        <label for="bookmyticket">Book My Ticket</label>
+
+        <input type="checkbox" id="railyatri" name="ticket-booking" value="Rail Yatri" onclick="toggleContinueButton()">
+        <label for="railyatri">Rail Yatri</label>
+
+        <input type="checkbox" id="make-my-trip" name="ticket-booking" value="Make My Trip" onclick="toggleContinueButton()">
+        <label for="make-my-trip">Make My Trip</label>
+
+        <input type="checkbox" id="goIbibo" name="ticket-booking" value="GoIbibo" onclick="toggleContinueButton()">
+        <label for="goIbibo">GoIbibo</label>
+      </div>
+
+      <!-- Continue Button - Initially hidden -->
+      <button type="submit" id="continue-btn" class="submit-btn" style="display: none;">Continue</button>
+    </form>
+  </div>
+
+</body>
+</html>
